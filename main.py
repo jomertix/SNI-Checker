@@ -43,7 +43,7 @@ async def check_domains(domains: list[str], timeout=3):
     bar_format = '{l_bar}{bar:20}| {n_fmt}/{total_fmt} [{elapsed}]'
     desc = 'Progress'
 
-    async with httpx.AsyncClient(http2=True, verify=context, timeout=timeout) as client:
+    async with httpx.AsyncClient(http2=True, verify=context, timeout=timeout, trust_env=False) as client:
         tasks = [check_domain(client, domain) for domain in domains]
         progress_bar = tqdm(asyncio.as_completed(tasks), total=len(tasks), desc=desc, bar_format=bar_format, leave=True)
         results = [await task for task in progress_bar]
