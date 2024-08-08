@@ -1,0 +1,6 @@
+.venv
+.idea
+
+verified_domains.txt
+verified_domains_with_ping.txt
+list.txt
