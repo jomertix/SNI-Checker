@@ -76,7 +76,8 @@ def find_file(file_path):
 
 def save_verified_domains(domains: list[str], file_to_save):
     with open(file_to_save, 'w') as file:
-        file.write('\n'.join(domains))
+        for domain in domains:
+            file.write(f'{domain}\n')
 
 
 def save_verified_domains_with_ping(data: list[tuple], file_to_save):
