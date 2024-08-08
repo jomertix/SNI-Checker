@@ -1,5 +1,5 @@
 # SNI-Checker
-Domain cecker to find out if they support TLS 1.3 and HTTP/2.
+Domain checker to find out if they support TLS 1.3 and HTTP/2.
 
 ## Install
 To install checker run the following command:
