@@ -12,7 +12,7 @@ async def ping_server(domain: str, timeout=3):
     try:
         delay = await aioping.ping(dest_addr=domain, timeout=timeout)
         return delay * 1000
-    except TimeoutError:
+    except Exception:
         return None
 
 
@@ -23,7 +23,7 @@ async def check_tls_v1_3_and_http2(client: httpx.AsyncClient, domain: str):
         supports_tls_v1_3 = response.is_success
         supports_http2 = response.http_version == 'HTTP/2'
         return supports_tls_v1_3, supports_http2
-    except (httpx.HTTPStatusError, httpx.RequestError, ssl.SSLError):
+    except Exception:
         return False, False
 
 
