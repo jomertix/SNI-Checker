@@ -4,7 +4,7 @@ Domain checker to find out if they support TLS 1.3 and HTTP/2.
 ## Install
 To install checker run the following command:
 ```
-wget -N https://raw.githubusercontent.com/jomertix/SNI-Checker/main/run.sh && bash run.sh
+bash -c "$(wget -qO- https://raw.githubusercontent.com/jomertix/SNI-Checker/main/run.sh)" && cd SNI-Checker
 ```
 
 ## Usage 
