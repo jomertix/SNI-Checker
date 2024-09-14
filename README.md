@@ -1,7 +1,7 @@
 # SNI-Checker
 Easy filter domains that support TLS 1.3 and HTTP/2.
 
-DONT RUN ON SERVER
+**DONT RUN ON THE SERVER**
 
 ## Install
 To install checker run the following command:
